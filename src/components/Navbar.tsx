@@ -19,7 +19,7 @@ export default function Navbar() {
       </nav>
 
       <a href="#contact" className="nav-cta">
-        LET'S TALK <ArrowUpRight size={17} />
+        LET'S TALK <ArrowUpRight size={20} />
       </a>
 
       <button

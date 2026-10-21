@@ -2011,3 +2011,60 @@ a {
   padding: 6px 12px;
   margin-bottom: 20px;
 }
+/* ============================================
+   FIX MOBILE OVERFLOW (Certificates + Contact)
+   ============================================ */
+
+/* Cegah halaman bisa digeser ke samping */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Judul Contact: ukuran mengikuti lebar layar */
+.contact-inner .contact-title {
+  font-size: 5rem;
+  line-height: 0.95;
+  letter-spacing: -4px;
+  font-weight: 700;
+  margin: 16px 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.contact-inner .contact-title span {
+  color: #d9656d;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .contact-inner .contact-title {
+    font-size: clamp(48px, 10vw, 72px);
+    letter-spacing: -3px;
+  }
+}
+
+/* HP */
+@media (max-width: 700px) {
+  .contact-inner .contact-title {
+    font-size: clamp(40px, 12.5vw, 56px);
+    letter-spacing: -2px;
+  }
+
+  /* Judul Certificates boleh turun ke baris berikutnya */
+  .section-heading-row .section-title {
+    font-size: clamp(30px, 8.5vw, 40px);
+    letter-spacing: -1.5px;
+    white-space: normal;
+  }
+
+  /* Kartu sertifikat tidak melebar */
+  .certificate-card {
+    gap: 12px;
+  }
+
+  .certificate-card h3 {
+    font-size: 14px;
+  }
+}

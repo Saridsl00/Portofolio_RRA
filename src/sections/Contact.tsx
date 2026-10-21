@@ -24,25 +24,23 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section relative py-12">
-      <div className="section-wrap contact-inner max-w-6xl mx-auto px-4">
+    <section id="contact" className="contact-section relative">
+      <div className="section-wrap contact-inner">
         <SectionLabel number="04">GET IN TOUCH</SectionLabel>
 
         {/* Layout 2 Kolom Sejajar */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-6 items-center">
-          
           {/* SISI KIRI: Teks Utama & Social Links */}
-          <div className="contact-info flex flex-col justify-center">
+          <div className="contact-info flex flex-col justify-center min-w-0">
             <p className="eyebrow">HAVE AN IDEA IN MIND?</p>
 
-            {/* Judul menggunakan class bawaan template, font size dikecilkan dengan max-width agar pas */}
-            <h2 className="max-w-xs md:max-w-sm mb-4 leading-tight" style={{ fontSize: '5rem' }}>
+            <h2 className="contact-title mb-4">
               Let's make <br />
               something <span>great.</span>
             </h2>
 
             <p className="contact-description text-gray-300 text-xs md:text-sm leading-relaxed mb-6 max-w-md">
-              I am currently open to full-time, contract, or freelance opportunities. 
+              I am currently open to full-time, contract, or freelance opportunities.
               Whether you have a question or just want to say hi, feel free to drop a message!
             </p>
 
@@ -83,7 +81,7 @@ export default function Contact() {
           </div>
 
           {/* SISI KANAN: Form & Preview CV */}
-          <div className="contact-card bg-gray-900/40 backdrop-blur-md p-5 md:p-6 rounded-2xl border border-gray-800 shadow-xl">
+          <div className="contact-card min-w-0 bg-gray-900/40 backdrop-blur-md p-5 md:p-6 rounded-2xl border border-gray-800 shadow-xl">
             <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
               <Mail size={18} className="text-cyan-400" /> Send a Message
             </h3>

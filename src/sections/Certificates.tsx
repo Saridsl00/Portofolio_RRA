@@ -11,7 +11,7 @@ export default function Certificates() {
       <SectionLabel number="03">CERTIFICATES & LEARNING</SectionLabel>
 
       <div className="section-heading-row mb-8">
-        <h2 className="section-title text-2xl md:text-3xl font-bold whitespace-nowrap">
+        <h2 className="section-title text-2xl md:text-3xl font-bold">
           Learning never <span>goes out of style.</span>
         </h2>
         <p className="text-sm text-gray-400">
@@ -21,17 +21,17 @@ export default function Certificates() {
 
       {/* List Sertifikat */}
       <div className="certificate-list flex flex-col gap-4">
-        {certificates.map((certificate: Certificate, index: number) => (
+        {certificates.map((certificate: Certificate) => (
           <article
             key={certificate.title}
             className="certificate-card flex items-center justify-between p-4 bg-gray-900/60 border border-gray-800 rounded-xl transition-all hover:border-gray-700"
           >
-            <div className="flex items-center gap-4">
-              <div className="certificate-icon p-3 bg-blue-600/20 text-blue-400 rounded-lg">
+            <div className="flex items-center gap-4 min-w-0">
+              <div className="certificate-icon p-3 bg-blue-600/20 text-blue-400 rounded-lg shrink-0">
                 <Palette size={21} />
               </div>
 
-              <div className="certificate-details">
+              <div className="certificate-details min-w-0">
                 <h3 className="font-semibold text-lg text-white">
                   {certificate.title}
                 </h3>
@@ -39,7 +39,7 @@ export default function Certificates() {
               </div>
             </div>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 shrink-0">
               <div className="certificate-year flex items-center gap-2 text-xs text-gray-400">
                 <Calendar size={14} />
                 <span>{certificate.year}</span>
